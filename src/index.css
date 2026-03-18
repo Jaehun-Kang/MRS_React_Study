@@ -4,8 +4,55 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+  /* Colors */
+  --bg-primary: light-dark(#f5f5f5, #242424);
+  --bg-secondary: light-dark(#fff, #181818);
+  --bg-tertiary: light-dark(#fafafa, #1a1a1a);
+  --text-primary: light-dark(#213547, rgba(255, 255, 255, 0.87));
+  --text-secondary: light-dark(#666, #ccc);
+  --border-color: light-dark(#ddd, #333);
+  --border-light: light-dark(#e0e0e0, #444);
+  --link-color: #646cff;
+  --link-hover: #535bf2;
+  --header-bg: light-dark(#fff, #1e1e1e);
+  --header-shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+  --code-bg: light-dark(#fff, #2a2a2a);
+  --code-border: light-dark(#ddd, #444);
+  --table-bg: light-dark(#f5f5f5, #2a2a2a);
+  --table-header-bg: light-dark(#e8e8e8, #1f1f1f);
+  --table-header-color: light-dark(#1976d2, #5999ff);
+  --table-row-even-bg: light-dark(#fafafa, #252525);
+  --table-border: light-dark(#ddd, #444);
+  --button-bg: light-dark(#e8e8e8, #3a3a3a);
+  --button-color: light-dark(#333, #e0e0e0);
+  --button-border: light-dark(#ccc, #555);
+  --button-hover-bg: light-dark(#d8d8d8, #4a4a4a);
+  --button-hover-border: light-dark(#999, #888);
+  --button-hover-color: light-dark(#000, #fff);
+  --button-active-bg: light-dark(#f0f0f0, #2a2a2a);
+  --button-active-border: light-dark(#aaa, #666);
+  --accent-primary: #4675c0;
+  --accent-secondary: #4d90fe;
+  --selected-bg: light-dark(#e3f2fd, #2a2f4a);
+  --selected-color: light-dark(#1976d2, #fff);
+  --hover-overlay: light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+  --list-hover-border: light-dark(#333, white);
+
+  /* Fire Particle Colors */
+  --fire-particle-primary: #ff6b1b;
+  --fire-particle-secondary: #ff4500;
+  --fire-particle-glow-1: rgba(255, 107, 27, 0.8);
+  --fire-particle-glow-2: rgba(255, 69, 0, 0.6);
+  --fire-particle-transparent: rgba(255, 69, 0, 0);
+
+  /* Other Colors */
+  --checkboard-light: #ccc;
+  --checkboard-bg: #fff;
+  --error-color: red;
+
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +62,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--link-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--link-hover);
 }
 
 body {
@@ -28,3 +75,15 @@ body {
   min-height: 100vh;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #fff;
+    --bg-tertiary: #fafafa;
+    --text-primary: #213547;
+    --text-secondary: #666;
+    --border-color: #ddd;
+    --link-color: #646cff;
+    --link-hover: #535bf2;
+  }
+}

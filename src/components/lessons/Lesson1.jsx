@@ -17,13 +17,13 @@ const Lesson1 = {
         language="bash"
         code={`npm create vite@latest`}
       />
-      <p>3. 프로젝트명 설정, 라이브러리 선택(React), 언어 선택(JavaScript)을 한다.</p>
       <p>특정 폴더 자체를 React 프로젝트로 만들고 싶다면 위쪽 코드 대신 아래처럼 쓰면 된다.</p>
       <CodeBlock
         filename="Terminal"
         language="bash"
         code={`npm create vite@latest . -- --template react`}
       />
+      <p>3. 프로젝트명 설정, 라이브러리 선택(React), 언어 선택(JavaScript)을 한다.</p>
 
       <h3>React 라이브러리 설치</h3>
       <p>1. 생성된 폴더를 다시 VSCode로 연다.</p>
