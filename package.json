@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jaehun-kang.github.io/MRS_React_Lecture",
+  "homepage": "https://jaehun-kang.github.io/MRS_React_Study",
   "scripts": {
     "dev": "cross-env BROWSER=chrome vite",
     "build": "vite build",
