@@ -8,6 +8,7 @@ const Lesson6 = {
   content: (
     <div className="lesson-content">
       <h2>조건부 렌더링과 리스트 렌더링</h2>
+      <h3>조건부 렌더링</h3>
       <p>첫 시작</p>
       <CodeBlock
         filename="App.css"
@@ -25,11 +26,11 @@ function App() {
 
   const isLoggedIn = true
 
- return (
+  return (
     <>
       {<h1>JSX</h1>}
 
-      // 코드가 필요해요
+      {/* 코드 필요 */}
 
       {isLoggedIn ? (
         <>
@@ -63,14 +64,14 @@ export default App`}
 
 function getUserContent(userStatus) {
   return (
-    // 코드가 필요해요
+      // 코드 필요
     )
   );
 }
 
 function App() {
 
- return (
+  return (
     <>
       {getUserContent("admin")}
     </>
@@ -96,7 +97,7 @@ function App() {
 
   return (
     <>
-    // 코드가 필요해요
+      {/* 코드 필요 */}
     </>
   )
 }
@@ -116,9 +117,9 @@ export default App`}
 
 function App() {
 
- return (
+  return (
     <>
-      // 코드 필요해요
+      {/* 코드 필요 */}
     </>
   )
 }
@@ -148,9 +149,9 @@ function App() {
 
   const fruits = ["Apple", "Banana", "Cherry"]
 
- return (
+  return (
     <>
-      // 코드를 넣어주세요
+      {/* 코드 필요 */}
     </>
   )
 }
@@ -177,7 +178,7 @@ function App() {
 
   return (
     <>
-      // 코드를 넣어주세요
+      {/* 코드 필요 */}
     </>
   )
 }

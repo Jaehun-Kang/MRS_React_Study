@@ -1,9 +1,9 @@
-import '../../styles/lesson.css';
-import CodeBlock from '../CodeBlock';
+import "../../styles/lesson.css";
+import CodeBlock from "../CodeBlock";
 import Foldable from "../Foldable";
 
 const Lesson4 = {
-  name: '4. 컴포넌트 기초',
+  name: "4. 컴포넌트 기초",
   idx: 4,
   content: (
     <div className="lesson-content">
@@ -23,8 +23,13 @@ const Lesson4 = {
 
 export default Component;`}
         />
-        <p>위처럼 Camal Case 네이밍과 .jsx 확장자가 있어야 컴포넌트로 인식한다.</p>
-        <p>하나의 컴포넌트는 하나의 요소만 반환 가능하기 때문에 2개 이상의 요소는 빈 프래그먼트로 감싸야 한다.</p>
+        <p>
+          위처럼 Camal Case 네이밍과 .jsx 확장자가 있어야 컴포넌트로 인식한다.
+        </p>
+        <p>
+          하나의 컴포넌트는 하나의 요소만 반환 가능하기 때문에 2개 이상의 요소는
+          빈 프래그먼트로 감싸야 한다.
+        </p>
         <CodeBlock
           filename="App.jsx"
           language="jsx"
@@ -39,7 +44,10 @@ export default Component;`}
 
 export default App;`}
         />
-        <p>특정 컴포넌트 안에서 활용될 작은 컴포넌트는 아래와 같이 한 파일에 작성해도 된다.</p>
+        <p>
+          특정 컴포넌트 안에서 활용될 작은 컴포넌트는 아래와 같이 한 파일에
+          작성해도 된다.
+        </p>
         <CodeBlock
           filename="App.jsx"
           language="jsx"
@@ -58,7 +66,10 @@ function App() {
 
 export default App;`}
         />
-        <p>하지만 코드가 길어질 경우나 여러 컴포넌트에 사용할 경우에는 파일을 분리해주는 것이 좋다.</p>
+        <p>
+          하지만 코드가 길어질 경우나 여러 컴포넌트에 사용할 경우에는 파일을
+          분리해주는 것이 좋다.
+        </p>
         <p>export와 import를 적절히 해주어야 하는 것을 기억하자.</p>
         <CodeBlock
           filename="Child.jsx"
@@ -139,7 +150,10 @@ const ArrowFunctionComp = () => {
 export default ArrowFunctionComp;
 `}
         />
-        <p>화살표 함수는 한 줄짜리 표현식일 경우 return 구문 없이도 사용 가능하다.</p>
+        <p>
+          화살표 함수는 한 줄짜리 표현식일 경우 return 구문 없이도 사용
+          가능하다.
+        </p>
         <CodeBlock
           filename="Components.jsx"
           language="jsx"
@@ -152,7 +166,7 @@ export default ArrowFunctionComp;
         />
       </div>
     </div>
-  )
+  ),
 };
 
 export default Lesson4;

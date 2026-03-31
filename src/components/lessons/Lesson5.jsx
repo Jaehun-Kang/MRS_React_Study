@@ -36,7 +36,7 @@ const element2 = (
 console.log(element1)
 console.log(element2)
 
- return (
+  return (
     <>
       {/* JSX Practices */}
       <h1>JSX</h1>
@@ -63,13 +63,13 @@ function BasicExpressions() {
   
   return (
     <div>
-// 이곳에 코드 필요
+      {/* 코드 필요 */}
     </div>
   );
 }
 
 function App() {
- return <BasicExpressions />
+  return <BasicExpressions />
 }
 
 export default App`}
@@ -94,13 +94,13 @@ function ObjectArrayExpressions() {
   
   return (
     <div>
-// 이곳에 코드 필요
+      {/* 코드 필요 */}
     </div>
   );
 }
 
 function App() {
- return <ObjectArrayExpressions />
+  return <ObjectArrayExpressions />
 }
 
 export default App`}
@@ -113,7 +113,7 @@ export default App`}
         code={`import './App.css'
 
 function FunctionExpressions() {
-  const getGreeting = (name) => '이곳에도 코드 필요';
+  const getGreeting = (name) => '코드 필요';
   
   const formatDate = (date) => {
     return new Date(date).toLocaleDateString();
@@ -130,14 +130,14 @@ function FunctionExpressions() {
   
   return (
     <div>
-    // 이곳에 코드 필요
+      {/* 코드 필요 */}
     </div>
   );
 }
 
 
 function App() {
- return <FunctionExpressions />
+  return <FunctionExpressions />
 }
 
 export default App`}
@@ -163,13 +163,13 @@ const element2 = (
 function ElementExpressions () {
   return (
     <section>
-// 이곳에 코드 필요
+      {/* 코드 필요 */}
     </section>
   )
 }
 
 function App() {
- return <ElementExpressions />
+  return <ElementExpressions />
 }
 
 export default App`}

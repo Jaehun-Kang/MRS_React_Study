@@ -26,7 +26,7 @@ function App() {
         Username:
       </label>
       <input
-        // 코드가 필요해요
+        // 코드 필요
 
         className="input-field"   // class
         autoComplete="off"        // autocomplete
@@ -36,8 +36,7 @@ function App() {
         readOnly={false}          // readonly
         tabIndex={0}              // tabindex
 
-        // 코드가 필요해요
-        }
+        // 코드 필요
       />
     </>
   )
@@ -48,10 +47,10 @@ export default App`}
       <p>
         1. className은 실무에서 자주 사용된다. for와 class의 이름이 자주 바뀌는
         이유는 자바 스크립트에 예약어이기 때문이다. 예약어는 특정 용도로 쓰임이
-        정해져 변수명이나 속성명 등으로 쓰일 수 없는 키워드 들이다.{" "}
+        정해져 변수명이나 속성명 등으로 쓰일 수 없는 키워드들이다.{" "}
       </p>
       <p>
-        2. 그 외의 속성들은 자바 스크립트 객체로 변환된다.이 언어들은 네이빙
+        2. 그 외의 속성들은 자바 스크립트 객체로 변환된다. 이 언어들은 네이빙
         컨벤션을 따른다.
       </p>
       <p> 3. 이 속성들 또한 중괄호가 사용된다.</p>
@@ -60,7 +59,7 @@ export default App`}
         filename="App.jsx"
         language="jsx"
         code={`import './App.css'
-import reactLogo from '코드가 필요해요'
+import reactLogo from '코드 필요'
 
 const reactLogoAlt = 'React Logo'
 console.log(reactLogo)
@@ -68,7 +67,7 @@ console.log(reactLogo)
 function App(){
   return(
     <>
-    // 코드가 필요해요
+      {/* 코드 필요 */}
     </>
   )
 }
@@ -84,9 +83,9 @@ export default App`}
 
 function App() {
 
- return (
+  return (
     <>
-      // 코드가 필요해요
+      {/* 코드 필요 */}
     </>
   )
 }
@@ -111,14 +110,14 @@ function App() {
     borderRadius: '8px'
   }
 
- return (
+  return (
     <>
       <div style={divStyle}>
         DIV 1
       </div>
 
       <div
-        // 코드가 필요해요
+        // 코드 필요
       >
         DIV 2
       </div>
@@ -154,20 +153,21 @@ function App() {
     color: 'navy',
     textDecoration: 'underline',
   }
-// false로도 값 변경 해보기
+
+  // false로도 값 변경 해보기
   const isPrimary = true
 
- return (
+  return (
     <>
       <div 
-      // 코드가 필요해요
+        // 코드 필요
       >
         This text has dynamic styling.
       </div>
 
       <span
         style={{
-          // 코드가 필요해요
+          // 코드 필요
         }}
       >
         So does this text.
@@ -184,14 +184,14 @@ export default App`}
         filename="ButtonA.css"
         language="css"
         code={`.button {
-  // 코드가 필요해요
+  {/* 코드 필요 */}
 }`}
       />
       <CodeBlock
         filename="ButtonA.css"
         language="css"
         code={`.button {
-// 코드가 필요해요
+  {/* 코드 필요 */}
 }`}
       />
       <p>2.jsx</p>
