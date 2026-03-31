@@ -8,7 +8,7 @@ const Lesson8 = {
   content: (
     <div className="lesson-content">
       <h2>컴포넌트의 Props</h2>
-      <p>내용</p>
+      <p>마법</p>
       <CodeBlock
         filename="MyComponent.jsx"
         language="jsx"
