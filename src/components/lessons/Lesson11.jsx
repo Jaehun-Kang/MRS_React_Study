@@ -175,86 +175,70 @@ const App = () => {
 
 export default App`}
       />
-      <p></p>
+      <p>
+        convertedTemp라는 상수가 사용되는 부분에 유닛의 값에 다라 삼항 연산자를
+        사용하여 두 숫자 중 하나를 반환하는데 세터 함수도 아닌 이것은 유닛의
+        값이 바뀔 때 리렌더링에 의해 앱 컴포넌트 함수도 다시 실행되므로 이
+        상수가 다른 값으로 초기화 된다.{" "}
+      </p>
+      <h3>같은 폼 안에 있는 다수의 state들을 효율적으로 다루는 방법</h3>
       <CodeBlock
-        filename="ButtonB.jsx"
+        filename="App.jsx"
         language="jsx"
-        code={`import React from 'react';
-import './ButtonB.css';
+        code={`import './App.css'
+import { useState } from 'react'
 
-function ButtonB() {
+// 함수명을 영상의 'Form'에서 'App'으로 수정했습니다.
+function App() {
+  const [username, setUsername] = useState('')
+  const [isSubscribed, setSubscribed]
+   = useState(false)
+  const [role, setRole] = useState('user')
+  const roles = ['user', 'admin', 'guest']
+
   return (
-    <button className="button">
-      Button B
-    </button>
+    // 코드 필요
   )
 }
 
-export default ButtonB`}
+export default App`}
       />
       <p>
-        이 두 버튼 모두 버튼 이라는 문자열의 클래스명을 사용하여 모든 스타일
-        명을 따라 모두 적용된다. 그래서 css모듈 기능을 사용해면 스타일 충돌을
-        없앨 수 있다.
+        다른 예제 코드
       </p>
-      <p>1.css</p>
+      <p>2.App.jsx</p>
       <CodeBlock
-        filename="ButtonA.module.css"
-        language="css"
-        code={`.button {
-  background-color: skyblue;
-  padding: 10px;
-  font-size: 16px;
-}
-.slider { padding: 0; }
-#topmenu { margin: 0; }`}
-      />
-      <CodeBlock
-        filename="ButtonB.module.css"
-        language="css"
-        code={`.button {
-  border: 2px solid red;
-  margin: 15px;
-  text-transform: uppercase;
-}`}
-      />
-      <p>2.jsx</p>
-      <CodeBlock
-        filename="ButtonA.jsx"
+        filename="App.jsx"
         language="jsx"
-        code={`import React from 'react';
-import styles from './ButtonA.module.css';
+        code={`import './App.css'
+import { useState } from 'react'
 
-function ButtonA() {
-  console.log(styles)
+// 함수명을 영상의 'Form'에서 'App'으로 수정했습니다.
+function App() {
+  const [formData, setFormData] = useState({
+    username: '',
+    isSubscribed: false,
+    role: 'user'
+  })
+  const roles = ['user', 'admin', 'guest']
+
+  const handleChange = (e) => {
+    const { name, value, type, checked }
+     = e.target
+    setFormData({
+      ...formData,
+      [name]:  type === 'checkbox' ? checked : value
+    })
+  }
 
   return (
-    <button className={styles.button}>
-      Button A
-    </button>
+    // 코드 필요
   )
 }
 
-export default ButtonA`}
+export default App`}
       />
-      <CodeBlock
-        filename="ButtonB.jsx"
-        language="jsx"
-        code={`import React from 'react';
-import styles from './ButtonB.module.css';
-
-function ButtonB() {
-  console.log(styles)
-
-  return (
-    <button className={styles.button}>
-      Button B
-    </button>
-  )
-}
-
-export default ButtonB`}
-      />
+      <p></p>
     </div>
   ),
 };
