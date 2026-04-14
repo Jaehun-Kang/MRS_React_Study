@@ -203,9 +203,7 @@ function App() {
 
 export default App`}
       />
-      <p>
-        다른 예제 코드
-      </p>
+      <p>다른 예제 코드</p>
       <p>2.App.jsx</p>
       <CodeBlock
         filename="App.jsx"
