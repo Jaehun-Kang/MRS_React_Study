@@ -221,12 +221,7 @@ function App() {
   const roles = ['user', 'admin', 'guest']
 
   const handleChange = (e) => {
-    const { name, value, type, checked }
-     = e.target
-    setFormData({
-      ...formData,
-      [name]:  type === 'checkbox' ? checked : value
-    })
+    // 코드 필요
   }
 
   return (
@@ -236,7 +231,10 @@ function App() {
 
 export default App`}
       />
-      <p></p>
+      <p>
+        다수의 입력요소를 하나의 state와 handling함수를 다룰 수 있다. 이는 높은
+        효율성을 보여준다.
+      </p>
     </div>
   ),
 };
