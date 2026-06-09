@@ -1424,7 +1424,7 @@ const App = () => {
 }
 
 export default App
-          `})]})},i1={name:"14. 생명주기와 useEffect",idx:14,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"생명주기와 useEffect"}),f.jsx("p",{children:"내용"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Mounting"}),f.jsx("p",{children:"컴포넌트가 처음으로 렌더링 되는 시점"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Updating"}),f.jsx("p",{children:"props, state가 변경되는 시점 등에 리렌더링 되어 화면에 새롭게 나타남"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Unmounting"}),f.jsx("p",{children:"컴포넌트가 DOM에서 제거되는 순간에 이뤄짐"}),f.jsxs(Ot,{title:"시작 코드",children:[f.jsx(G,{filename:"App.css",language:"css",code:`#root {
+          `})]})},i1={name:"14. 생명주기와 useEffect",idx:14,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"생명주기와 useEffect"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Mounting"}),f.jsx("p",{children:"컴포넌트가 처음으로 렌더링 되는 시점"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Updating"}),f.jsx("p",{children:"props, state가 변경되는 시점 등에 리렌더링 되어 화면에 새롭게 나타남"}),f.jsx("h4",{style:{fontSize:"120%",marginLeft:"8px"},children:" Unmounting"}),f.jsx("p",{children:"컴포넌트가 DOM에서 제거되는 순간에 이뤄짐"}),f.jsxs(Ot,{title:"시작 코드",children:[f.jsx(G,{filename:"App.css",language:"css",code:`#root {
           margin: 0 auto;
           }
           
