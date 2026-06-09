@@ -8,7 +8,7 @@ const Lesson14 = {
   content: (
     <div className="lesson-content">
       <h2>생명주기와 useEffect</h2>
-      <p>내용</p>
+
       <h4 style={{ fontSize: '120%', marginLeft: '8px' }}> Mounting</h4>
       <p>컴포넌트가 처음으로 렌더링 되는 시점</p>
       <h4 style={{ fontSize: '120%', marginLeft: '8px' }}> Updating</h4>
