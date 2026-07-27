@@ -1699,7 +1699,7 @@ const App = () => {
     </>
   )
 }
-export default App`})]})},l1={name:"16. 최적화",idx:16,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"최적화"}),f.jsx("p",{children:"React에서 최적화란 불필요한 연산이나 렌더링을 방지하여 애플리케이션의 성능을 개선하는 것"}),f.jsx("h2",{children:"1. useMemo"}),f.jsx(j,{filename:"App.css",language:"css",code:`#root {
+export default App`})]})},l1={name:"16. 최적화",idx:16,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"최적화"}),f.jsx("p",{children:"React에서 최적화란 불필요한 연산이나 렌더링을 방지하여 애플리케이션의 성능을 개선하는 것"}),f.jsx("h3",{children:"1. useMemo"}),f.jsx(j,{filename:"App.css",language:"css",code:`#root {
   margin: 0 auto;
 }
 
@@ -1729,7 +1729,7 @@ function App() {
   )
 }
 
-export default App`}),f.jsx("p",{children:"이처럼 useMemo는 특정 연산에 불필요한 제실행을 방지하여 어플리케이션의 성능을 최적화하는데 사용됩니다."}),f.jsx("h2",{children:"2. React.memo"}),f.jsx(j,{filename:"App.jsx",language:"jsx",code:`import './App.css'
+export default App`}),f.jsx("p",{children:"이처럼 useMemo는 특정 연산에 불필요한 제실행을 방지하여 어플리케이션의 성능을 최적화하는데 사용됩니다."}),f.jsx("h3",{children:"2. React.memo"}),f.jsx(j,{filename:"App.jsx",language:"jsx",code:`import './App.css'
 import { useState } from 'react'
 import Child from './Child'
 
@@ -1766,7 +1766,7 @@ function Child({ active }) {
 }
 
 export default Child
-// 최적화를 위한 위 코드 변형 필요 `}),f.jsx("p",{children:"이처럼 React의 메모 기능을 사용해서 자식 컴포넌트의 불필요한 렌더링을 방지 가능하다."}),f.jsx("h2",{children:"3. useCallback"}),f.jsx(j,{filename:"Child.jsx",language:"jsx",code:`import React from 'react'
+// 최적화를 위한 위 코드 변형 필요 `}),f.jsx("p",{children:"이처럼 React의 메모 기능을 사용해서 자식 컴포넌트의 불필요한 렌더링을 방지 가능하다."}),f.jsx("h3",{children:"3. useCallback"}),f.jsx(j,{filename:"Child.jsx",language:"jsx",code:`import React from 'react'
 
 function Child({ 
 // 코드 필요
