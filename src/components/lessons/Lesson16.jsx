@@ -12,7 +12,7 @@ const Lesson16 = {
         React에서 최적화란 불필요한 연산이나 렌더링을 방지하여 애플리케이션의
         성능을 개선하는 것
       </p>
-      <h2>1. useMemo</h2>
+      <h3>1. useMemo</h3>
       <CodeBlock
         filename="App.css"
         language="css"
@@ -58,7 +58,7 @@ export default App`}
         성능을 최적화하는데 사용됩니다.
       </p>
 
-      <h2>2. React.memo</h2>
+      <h3>2. React.memo</h3>
       <CodeBlock
         filename="App.jsx"
         language="jsx"
@@ -111,7 +111,7 @@ export default Child
         방지 가능하다.
       </p>
 
-      <h2>3. useCallback</h2>
+      <h3>3. useCallback</h3>
       <CodeBlock
         filename="Child.jsx"
         language="jsx"
