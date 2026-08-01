@@ -1937,7 +1937,7 @@ function Child4() {
   )
 }
 
-export default Child4`})]}),f.jsx("p",{children:"이처럼, useContext 훅을 사용하면 필요한 Context의 데이터만 가져와 사용할 수 있다."})]})},u1={name:"18. 라우팅",idx:18,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"라우팅"}),f.jsxs("p",{children:["주어진 URL에 따라 페이지 및 컨텐츠를 제공하는 방식이다.",f.jsx("br",{}),"특정 링크를 클릭했을 때 해당하는 페이지로 이동하도록 하는 등의 용도로 사용된다."]}),f.jsx("p",{children:"a 태그는 페이지를 이동할 때마다 서버에서 새로운 HTML 문서를 받아온다. 반면 React의 싱글 페이지 애플리케이션은 처음 로드된 페이지를 유지한 채 필요한 화면만 변경하여 페이지를 전환한다."}),f.jsxs(vt,{title:"시작 코드",children:[f.jsx(M,{filename:"App.css",language:"css",code:`#root {
+export default Child4`})]}),f.jsx("p",{children:"이처럼, useContext 훅을 사용하면 필요한 Context의 데이터만 가져와 사용할 수 있다."})]})},u1={name:"18. 라우팅",idx:18,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"라우팅"}),f.jsxs("p",{children:["주어진 URL에 따라 페이지 및 컨텐츠를 제공하는 방식이다.",f.jsx("br",{}),"특정 링크를 클릭했을 때 해당하는 페이지로 이동하도록 하는 등의 용도로 사용된다."]}),f.jsx("p",{children:"a 태그는 페이지를 이동할 때마다 서버에서 새로운 HTML 문서를 받아온다. 반면 React의 싱글 페이지 애플리케이션은 처음 로드된 페이지를 유지한 채 필요한 화면만 변경하여 페이지를 전환한다."}),f.jsx(M,{filename:"라이브러리 설치용",language:"jsx",code:"react-router-dom"}),f.jsxs(vt,{title:"시작 코드",children:[f.jsx(M,{filename:"App.css",language:"css",code:`#root {
   margin: 0 auto;
 }
 
@@ -1956,7 +1956,7 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  </BrowserRouter>
 )`}),f.jsx(M,{filename:"Home.jsx",language:"jsx",code:`const Home = () => (
   <>
     <h2>Home</h2>
@@ -1991,7 +1991,7 @@ export default About`}),f.jsx(M,{filename:"Contact.jsx",language:"jsx",code:`con
   </>
 )
 
-export default Contact`}),f.jsx(M,{filename:"MyCoAppmponent.jsx",language:"jsx",code:`import './App.css'
+export default Contact`}),f.jsx(M,{filename:"App.jsx",language:"jsx",code:`import './App.css'
 import { BrowserRouter, Routes, Route, Link }
   from 'react-router-dom'
 
@@ -2002,21 +2002,74 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <>
+      //코드 필요
+    </>
+  )
+}
+
+export default App`})]}),f.jsx("h3",{children:" Routes, Route"}),f.jsx("p",{children:"Routes는 다수의 Root 요소를 포함할 수 있으며, 현재 URL과 path가 일치하는 Route 하나만 렌더링한다. 각 Route는 path로 URL 경로를, element로 렌더링할 컴포넌트를 지정한다."}),f.jsx("h3",{children:" Link"}),f.jsxs("p",{children:["Link는 to 속성에 지정한 경로로 URL을 변경하여 페이지를 이동하는 컴포넌트이다.",f.jsx("br",{}),"a 태그와 달리 서버에 새로 요청을 보내지 않고, 페이지를 새로고침하지 않은 채 URL과 히스토리만 프로그래밍적으로 수정하여 해당 Route를 렌더링한다."]}),f.jsx("h3",{children:" useNavigate"}),f.jsx("p",{children:"useNavigate는 프로그래밍적으로 경로를 변경할 수 있는 훅이다. 반환된 함수에 이동할 경로를 전달하면 해당 페이지로 이동하며, Link처럼 미리 경로를 지정하는 방식이 아닌, 동적으로 경로를 변경해야 하는 경우 유용하게 사용할 수 있다."}),f.jsx(M,{filename:"App.jsx",language:"jsx",code:`coimport './App.css'
+import { Routes, Route, useParams, useLocation }
+  from 'react-router-dom'
+import React, { useEffect } from 'react'
+
+function Home() {
+  //코드 필요
+
+  return <h1>Home Page</h1>
+}
+
+function User() {
+  const { id } = useParams()
+  const location = useLocation()
+
+  useEffect(() => {
+    console.log('Current Path:', location.pathname)
+    console.log('URL Parameter (id):', id)
+  }, [id, location])
+
+  return <h1>User ID: {id}</h1>
+}
+
+function Search() {
+  //코드 필요
+
+  useEffect(() => {
+    console.log('Current Path:', location.pathname)
+    console.log(
+      'Query Parameter (keyword):', keyword
+    )}, [keyword, location])
+
+  return <h1>Search Keyword: {keyword}</h1>
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/user/:id' element={<User />} />
+      <Route path='/search' element={<Search />} />
+    </Routes>
+  )
+}
+
+export default Appde`}),f.jsx("h3",{children:" useLocation"}),f.jsx("p",{children:"현재 URL의 위치 정보를 담은 Location 객체를 반환하는 훅이다. pathname, search 등의 정보를 사용할 수 있으며, URL이 변경되면 함께 업데이트된다."}),f.jsx("h3",{children:" useParams"}),f.jsx("p",{children:"URL의 동적 파라미터를 가져오는 훅이다. :id와 같이 정의된 경로의 값을 객체 형태로 반환한다."}),f.jsx("h3",{children:"잘못된 URL"}),f.jsx("p",{children:'등록되지 않은 URL에 접근하는 경우를 처리하기 위해 path="*"를 사용한다. *는 다른 Route와 매칭되지 않는 모든 경로를 처리하며, 오류 페이지를 렌더링할 수 있다.'}),f.jsx(M,{filename:"App.jsx",language:"jsx",code:`import './App.css'
+import { Routes, Route, Link } from 'react-router-dom'
+
+const App = () => {
+  return (
+    <>
       <nav>
-        <Link to={'/'}>Home</Link>
-        <Link to={'/about'}>About</Link>
-        <Link to={'/contact'}>Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/wrong-path">Wrong Path</Link>
       </nav>
       <Routes>
-        <Route path='/'
-          element={<Home />} />
-        <Route path='/about'
-          element={<About />} />
-        <Route path='/contact'
-          element={<Contact />} />
+        <Route path="/" element={<h2>Home Page</h2>} />
+        <Route path="/about" element={<h2>About Page</h2>} />
+        <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
     </>
   )
 }
 
-export default App`})]}),f.jsx(M,{filename:"라이브러리 설치용",language:"jsx",code:"react-router-dom"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"})]})},c1={name:"19. 리액트 19 추가 기능",idx:19,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"리액트 19 추가 기능"}),f.jsx("p",{children:"내용"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"}),f.jsxs(vt,{title:"폴더제목",children:[f.jsx("p",{children:"내용"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"})]})]})},yR=[VD,YD,WD,KD,XD,ZD,QD,JD,e1,t1,a1,n1,r1,i1,o1,l1,s1,u1,c1],d1=({lessons:n,onSelect:i,selectedIdx:l})=>f.jsx("ul",{className:"lesson-list",children:n.map(s=>f.jsx("li",{className:l===s.idx?"selected":"",onClick:()=>i(s.idx),children:s.name},s.idx))});function p1(){const[n,i]=sn.useState(null),l=yR.find(s=>s.idx===n);return f.jsxs("div",{className:"app",children:[f.jsx("header",{className:"fixed-header",children:f.jsx("h1",{children:"⚛️ 마법연구회 React 정리"})}),f.jsxs("div",{className:"main-layout",children:[f.jsx("aside",{className:"sidebar",children:f.jsx(d1,{lessons:yR,onSelect:i,selectedIdx:n})}),f.jsx("main",{className:"content-area",children:l?l.content:f.jsx("h2",{children:"단원을 선택해주세요."})})]})]})}oC.createRoot(document.getElementById("root")).render(f.jsx(sn.StrictMode,{children:f.jsx(p1,{})}));
+export default App`}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"})]})},c1={name:"19. 리액트 19 추가 기능",idx:19,content:f.jsxs("div",{className:"lesson-content",children:[f.jsx("h2",{children:"리액트 19 추가 기능"}),f.jsx("p",{children:"내용"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"}),f.jsxs(vt,{title:"폴더제목",children:[f.jsx("p",{children:"내용"}),f.jsx(M,{filename:"MyComponent.jsx",language:"jsx",code:"code"})]})]})},yR=[VD,YD,WD,KD,XD,ZD,QD,JD,e1,t1,a1,n1,r1,i1,o1,l1,s1,u1,c1],d1=({lessons:n,onSelect:i,selectedIdx:l})=>f.jsx("ul",{className:"lesson-list",children:n.map(s=>f.jsx("li",{className:l===s.idx?"selected":"",onClick:()=>i(s.idx),children:s.name},s.idx))});function p1(){const[n,i]=sn.useState(null),l=yR.find(s=>s.idx===n);return f.jsxs("div",{className:"app",children:[f.jsx("header",{className:"fixed-header",children:f.jsx("h1",{children:"⚛️ 마법연구회 React 정리"})}),f.jsxs("div",{className:"main-layout",children:[f.jsx("aside",{className:"sidebar",children:f.jsx(d1,{lessons:yR,onSelect:i,selectedIdx:n})}),f.jsx("main",{className:"content-area",children:l?l.content:f.jsx("h2",{children:"단원을 선택해주세요."})})]})]})}oC.createRoot(document.getElementById("root")).render(f.jsx(sn.StrictMode,{children:f.jsx(p1,{})}));
