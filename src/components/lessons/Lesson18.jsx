@@ -250,8 +250,6 @@ const App = () => {
 
 export default App`}
       />
-
-      <CodeBlock filename="MyComponent.jsx" language="jsx" code={`code`} />
     </div>
   ),
 };
